@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>이름 :<input type="text" id ="name" value=""></div>
+        <div>지역:<select id="city" onchange="change_city()"> 
+        <option value="01">서울</option>    
+        <option value="02">제주</option>
+        <option value="03">창원</option>
+       
+        </select>
+    </div>
+    <div>
+        동네 :
+        <select id="region_01">
+            <option value="">강남</option>
+            <option value="">서초</option>
+        </select>
+        <select id="region_01_1" style="display: none;">
+            <option value="">신사동</option>
+            <option value="">압구정동</option>
+        </select>
+        <select id="region_02" style="display: none;">
+            <option value="">제주시</option>
+            <option value="">서귀포시</option>
+        </select>
+        <select id ="region_03" style="display:none;">
+            <option value="">성산구</option>
+            <option value="">의창구</option>
+        
+        </select>
+        <select id="email" style="background-color: aquamarine;" onClick="bbk()">
+            <option>naver.com</option>
+            <option>daum.com</option>
+            <option>gmail.com</option>
+            <option>nate.com</option>
+            <option>hanmail.com</option>
+
+        </select>
+    </div>
+    <button type="button" onclick="regist();">등록</button>
+
+    <button type="button" id="email_color" onclick="nnnn();">색상변경</button>
+    </div>
+    <div>숫자<input type ="number" id ="job">
+        <button id="gogo" onclick="">누르면 바껴요</button>
+    </div>
+             <!-- 연습    -->
+             <div id="zone">직업이나온다</div>
+    <div>직업<input type = "text" id="infor" value="">
+        <button id ="info" onclick="">정보버튼</button>
+        
+
+    </div>
+<script src="main.js">
+
+
+   
+
+</script>
+
+    
+</body>
+</html>

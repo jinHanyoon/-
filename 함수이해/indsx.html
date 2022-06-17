@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="alert-box" id="alert">
+    <p id="alert1">아이디를 입력하세요</p>
+    <button onclick="알림창열기('none')">닫기</button>
+</div>
+<button onclick="알림창열기('block')" ,onclick="text1" id="name">버튼1</button>
+<button onclick="알림창열기('block')" ,onchange="text" id="password">버튼2</button>
+
+
+<script>
+function 알림창열기(구멍){
+    document.getElementById('alert').style.display = 구멍;
+}
+
+let pass = document.getElementById("password")
+let first_name = document.getElementById("name")
+pass.addEventListener('click', text)
+first_name.addEventListener('click', text1)
+    
+function text(){
+    document.getElementById("alert1").innerHTML ="비밀번호를 입력하세요";
+}
+function text1(){
+    document.getElementById("alert1").innerHTML ="아이디를 입력하세요12";
+}
+
+</script>
+</body>
+</html>
