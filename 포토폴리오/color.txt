@@ -1,0 +1,10 @@
+   background-color: #58c3f581;
+
+   color:#0593d4;
+
+   border: 1px solid #0593d4; 
+
+   background-color: #0593d4; //글자
+
+
+    #0593d4;

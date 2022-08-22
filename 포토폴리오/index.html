@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>젠하이저</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js"></script>
     
@@ -47,69 +47,72 @@
         <section id="best_item">
             <h1> Best Sellsers</h1>
             <ul class="item">
+                <li> <div class="txt_box">
+                    <p>SENNHEISER</p>
+                    <h2>전세계의 많은 사랑을 받고있는 <br> 
+                        헤드폰의 정석<br>
+                        <span>HD 600</span>
+                        </h2>
+                </div>
+                    <img src="./image/bestimg1_0.png" alt="#">                
                 <li>
-                    <img src="./image/bestimg1_0.png" alt="헤드셋">
                     <div class="txt_box">
-                        <h4>젠하이저 HD 600</h4>
-                        <p>430,000원</p>
+                    <p>SENNHEISER</p>
+                        <h2>견고하고 편안한 헤드폰<br>
+                            그 성능을 경험해보세요<br>
+                        <span>HD 280 Pro</span>
+                    </h2>
                     </div>
-                    <span>상품정보</span>
-                    <a href="#">구매하기</a></li>
+                    <img src="./image/bestimg2_0.png" alt="#">
                 <li>
-                    <img src="./image/bestimg2_0.png" alt="헤드셋">
                     <div class="txt_box">
-                        <h4>젠하이저 HD 280 Pro</h4>
-                        <p>16,9000원</p>
-                    </div>
-                    <span>상품정보</span>
-                    <a href="#">구매하기</a></li>
-                <li>
-                    <img src="./image/bestimg3_0.png" alt="마이크">
-                    <div class="txt_box">
-                        <h4>젠하이저 e 835-S</h4>
-                        <p>11,0000원</p>
-                    </div>
-                    <span>상품정보</span>
-                    <a href="#">구매하기</a></li>
-            </ul>
+                    <p>SENNHEISER</p>
 
+                        <h2>강력하고 맑고 깨끗한<br>
+                             음질을 느껴보세요<br>
+                            <span>E 835-S</span>
+                        </h2>   
+                    </div>
+                <img src="./image/bestimg3_0.png" alt="#">
+            </ul>
         </section>
+
         <section id="store">
             <h1>S T O R E</h1>
             <ul class="store_item">
                 <li><a href="#">
                     <div class="buy">BUY</div>
                     <img src="./image/store2.jpg" alt="헤드셋">
-                    <div class="txt_box">
+                    <div class="text_box">
                         <h4>헤드셋</h4>
                     </div>
                 </a></li>
                     <li><a href="#">
                         <div class="buy">BUY</div>
                         <img src="./image/store4_img.jpg" alt="이어폰">
-                        <div class="txt_box">
+                        <div class="text_box">
                             <h4>이어폰</h4>
                         </div>
                        </a>
                        <li><a href="#">
                         <div class="buy">BUY</div>
                             <img src="./image/store4.jpg" alt="마이크">
-                            <div class="txt_box">
+                            <div class="text_box">
                                 <h4>마이크</h4>
                             </div>
                         </a>
                         <li><a href="#">
                         <div class="buy">BUY</div>
                                 <img src="./image/store3.jpg" alt="스피커">
-                                <div class="txt_box">
+                                <div class="text_box">
                                     <h4>스피커</h4>
                                 </div>    
                             </a></li>
             </ul>
-            <h2><a href="#">more</a></h2>
         </section>
       
-        <section id="event2">    
+        <section id="event2">
+            <h1> 젠하이저 이벤트</h1>
             <div class="hum">
                 <div class="hum_txt">
                     <p class="logo_txt">SENNHEISER</p>
@@ -140,6 +143,7 @@
             </a></li>
         </ul>
         </section>
+        
         <section id="event">
             <h1>E V E N T</h1>
             <p>제휴 카드로 결제시 할인 혜택!</p>
@@ -174,6 +178,7 @@
         $('.nav_menu li').hover(function(){   
             var k =$(this).index()
              $('.nav_menu li').eq(k).addClass('en')
+             console.log(k)
 
         },
         function(){
@@ -209,8 +214,12 @@
         $('.item li').hover(
             function()
             {var b=$(this).index();
-                       $('.item li').eq(b).addClass('in')},
-            function(){$('.item li').removeClass('in')})
+                       $('.item li').eq(b).addClass('in')
+                       $('.item h2').eq(b).addClass('in3')
+                   },
+            function(){$('.item li').removeClass('in')
+                       $('.item h2').removeClass('in3') 
+                      })
        
             $('.store_item li').hover(
             function(){
@@ -218,12 +227,15 @@
              //   $('.store_item li').eq(s).addClass('on1')
                 $('.store_item li img').eq(s).addClass('on2')
                 $('.buy').eq(s).show()
+                $('.text_box').eq(s).addClass('in3')
 
             },
             function(){
-                $('.store_item li').removeClass('on1')
+              //  $('.store_item li').removeClass('on1')
                 $('.store_item li img').removeClass('on2')
                 $('.buy').hide()
+                $('.text_box').removeClass('in3')
+
             })
             $('.hum').hover(function(){
                $('.hum').addClass('in2')
@@ -234,9 +246,9 @@
 
             })
             $('.event2_lucky li').hover(function(){
-                 var e=$(this).eq(e).index()
-                 console.log(e)
-                $('.event2_lucky li').eq(e).addClass('in1')
+                 var v=$(this).index()
+                 console.log(v)
+                $('.event2_lucky li').eq(v).addClass('in1')
             },function(){
                 $('.event2_lucky li').removeClass('in1')
             })
