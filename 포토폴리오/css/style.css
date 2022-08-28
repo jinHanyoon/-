@@ -1,24 +1,26 @@
 *{padding:0; margin: 0;}
 ul,li{list-style: none;}
 a{text-decoration: none;}
+
 #wrap{width: 100%; background-color:lightgray;}
-#header{width: 100%; height: 80px; display: flex;
-     border: 1px solid black; background-color:rgb(0, 0, 0); position: fixed; z-index: 1000;}
+#header{width: 100%; height: 70px; display: flex;
+      background-color:black; position: fixed; z-index: 1000;
+    }
 #header .logo{width: 300px; margin-left: 10px; line-height: 70px; color: white;}
-#header .logo img{width: 100%; height: 30px; margin-top: 25px;}
+#header .logo img{width: 100%; height: 20px; margin-top: 25px;}
 #nav{width: 900px;}
-#nav .nav_menu{width: 100%; height: 80px;
+#nav .nav_menu{width: 100%; height: 70px;
 display: flex; justify-content: space-around;}
-#nav .nav_menu li a{color: white; font-weight: bold;}
-#nav .nav_menu li{width: 150px; height: 80px;  
+#nav .nav_menu li a{color:wheat;font-weight: bold;}
+#nav .nav_menu li{width: 150px; height: 70px;  
  text-align: center; 
-padding-right: 15px; cursor: pointer; line-height: 80px;}
+padding-right: 15px; cursor: pointer; line-height: 70px;}
 #nav .nav_menu li.en{background-color:rgba(102, 97, 97, 0.507);
  transition: all, 1s;}
 #nav .nav_menu li:nth-child(4){padding-right: 0;}
-.login{display: flex; justify-content: space-between; line-height: 80px; 
+.login{display: flex; justify-content: space-between; line-height: 70px; 
     margin-left: 10px; margin-right: 20px 
-    ; width: 150px; height: 80px;}
+    ; width: 150px; height: 70px;}
 .login a{font-size: 12px; color: wheat;}
 /*--------------------헤더 끝----------------------*/
 
@@ -48,11 +50,11 @@ padding-right: 15px; cursor: pointer; line-height: 80px;}
 
 #best_item{width: 100%; height: 100vh;}
 #best_item h1{text-align:left; height: 70px; line-height: 70px;
-              color:#0593d4; margin-left: 70px;}
+    color: #0593d4; text-shadow: 3px 3px 5px rgb(161, 160, 160); margin-left: 70px;}
 #best_item .item{width: 1200px; margin: 0 auto;
                  height: 520px; }
 #best_item .item li{margin-bottom: 10px; display: flex;background-color: #ccc;
-                    }
+    width: 370px; height: 400px;  border: 1px solid#58c3f581;              }
 #best_item .item li:nth-child(1){width:1200px; height: 250px;
                                  justify-content: space-around;}
 #best_item .item li:nth-child(1) p{text-align: left;}
@@ -73,37 +75,45 @@ padding-right: 15px; cursor: pointer; line-height: 80px;}
 #best_item a{text-align: center; display: block; width: 100%; height: 40px;
      background-color: #0593d4; color: #ccc;}
 #best_item img{width: 100%;height: 250px; cursor: pointer;}
-#best_item .item li{width: 370px; height: 400px;  border: 1px solid#58c3f581; }
 #best_item .item li.in{background-color:#0593d4; color: black;
                         transition: all 1s;
                         box-shadow: rgba(17, 16, 17, 0.4) 
                         5px 5px, rgba(22, 20, 21, 0.3) 10px 10px, rgba(27, 25, 26, 0.2) 15px 15px,
                          rgba(240, 46, 170, 0.1) 20px 20px, rgba(8, 8, 8, 0.05) 25px 25px; }
-#best_item .item h2.in3{ color:#d3dbdf;;  text-shadow: 3px 3px 5px rgb(85, 83, 83)};
+#best_item .item h2.in3{ color:#d3dbdf; text-shadow: 3px 3px 5px rgb(85, 83, 83)};
+#best_item span.in4{background-color: black;}
 /*--------------------베스트 아이템 끝------------------*/
 
-#store{width: 100%; height: 100vh; position: relative;}
+#store{width: 100%; height: 100vh;}
 #store h1{text-align: left; height: 100px;line-height: 100px;
-           color:#0593d4; margin-left: 70px;}
+    color: #0593d4; text-shadow: 3px 3px 5px rgb(161, 160, 160); margin-left: 70px;}
 #store .store_item{width: 1200px; display: flex; margin: 0 auto;
-                   justify-content: space-between; height: 100%; margin-bottom: 50px;}
-#store .store_item img{width: 100%; height: 330px; } 
-#store .store_item .text_box{width: 280px;text-align: center; padding-top:22px; padding-bottom: 22px;
-  color: black; background-color: #0593d4}
-#store .store_item .text_box.in3{transition: all 1s; padding-top: 5px;
-    background-color: #0593d4; color: #ccc; }
+    position: relative;  justify-content: space-between; height: 100%; margin-bottom: 50px;}
+#store .store_item img{width: 100%; height: 330px; z-index: 100; } 
+#store .store_item .text_box{width: 280px;text-align: center; padding: 22px 0;
+  color: rgb(31, 27, 27); background-color: #0593d4; font-weight: bold;}
+#store .store_item .text_box.in3{transition: all 1s; padding-top:10px;
+    background-color: #0593d4;color:#d3dbdf;;  text-shadow: 3px 3px 5px rgb(85, 83, 83)}
 #store .store_item p{font-weight: bold; margin: 10px;} 
 #store .store_item a{}                         
-#store .store_item li{ width: 280px; height: 400px; border: 1px solid  #58c3f581;}
+#store .store_item li{ width: 280px; height: 400px;}
 #store .store_item img.on2{opacity: 0.3; transition: 1s;}
-#store .store_item .buy{position: absolute; top: 40%;color:#0593d4;
-font-size: 25px; font-weight: bold; width:280px; border: 1px solid #0593d4; text-align: center;
-background-color: #ccc;  color: black;}
+#store .store_item .buy{position: absolute; top:25%;color:#0593d4;
+font-size: 25px; font-weight: bold; width:280px; 
+border-top: 1px solid #0593d4; border-bottom: 1px solid #c0d7e2; 
+text-align: center; z-index: 1000;
+background-color:#0593d4; color:#d3dbdf;
+text-shadow: 3px 3px 5px rgb(161, 160, 160);
+ opacity: 0.8;}
 /*-----------------------스토어 끝---------------------*/
-
+.event2_title{text-align: center; margin: 20px;
+    color: #0593d4; text-shadow: 3px 3px 15px rgb(130, 143, 153);
+cursor: pointer;}
 #event{width: 100%; height: 100vh; margin: 0 auto;}
-#event h1{text-align: center; height: 100px; line-height: 100px;}
-#event p{text-align: center; height: 50px; line-height: 50px; font-weight: bold;} 
+#event h1{text-align: center; height: 100px; line-height: 100px;
+    color: #0593d4; text-shadow: 3px 3px 5px rgb(161, 160, 160);}
+#event p{text-align: center; height: 50px; line-height: 50px; font-weight: bold;
+    color: #0593d4; text-shadow: 3px 3px 5px rgb(161, 160, 160);} 
 #event .cd{width: 1200px; height: 800px; justify-content: space-between;
            margin: 0 auto; display: flex; position: relative;}
 #event .cd img{width: 100%;height: 350px;}
@@ -113,9 +123,9 @@ background-color: #ccc;  color: black;}
 #event .card3{margin-top: 20px; left:650px;}
 #event .card4{margin-top: 60px; left:950px;}
 #event2 {width: 1200px; height: 100vh; 
-      margin: 0 auto; overflow: hidden;}
+      margin: 0 auto; overflow: hidden;;}
 #event2 h1{text-align: left; margin-bottom: 50px;}      
-#event2 .hum{width: 100%; margin: 0 auto; height: 300px; 
+#event2 .hum{width: 100%; margin: 0 auto; height: 300px; position: relative; 
     border: 1px solid lightgray; background:url(../image/humimg1.jpg.jpg);
 background-size:cover; background-repeat: no-repeat; background-position:center;}
 #event2 .hum_txt{width: 500px; height: 300px;
@@ -133,11 +143,12 @@ background-size:cover; background-repeat: no-repeat; background-position:center;
 .hum.in2{transition: all 1s; transform: scale(1.1);}
                 
 #event2 .event2_lucky{width: 100%; display: flex;
+    height: 100%;
      margin: 0 auto; overflow: hidden;}
 #event2 .event2_lucky .logo_txt{font-weight: bold; width: 100%; text-align: left; padding-left: 30px;
         padding-top: 10px; padding-bottom: 5px; box-sizing: border-box; color:rgb(28, 82, 129) }     
 #event2 .event2_lucky li{width: 600px; margin: 0 auto; text-align: center;
-    height: 300px; background-color: antiquewhite; margin-right: 10px; border: 1px solid lightgray;}
+    height: 400px; background-color: antiquewhite; margin-right: 10px; border: 1px solid lightgray;}
 #event2 .event2_lucky li:nth-child(1){background: url(../image/event2_img.jpg);
      background-size: cover; background-repeat: no-repeat;}  
 #event2 .event2_lucky li:nth-child(2){margin-right: 0; background: url(../image/event22_img.jpg); background-size: cover;
@@ -154,7 +165,7 @@ background-size:cover; background-repeat: no-repeat; background-position:center;
 #event2 .lucky_txt2{width: 100%;
                      margin-top: 100px; text-align: center;}
 #event2 .lucky_txt2 h1{width: 100%; text-align: center; font-size: 40px;
-                        color:#0593d4;;  text-shadow: 3px 3px 5px rgb(85, 83, 83)}
+                        color:#0593d4;  text-shadow: 3px 3px 5px rgb(85, 83, 83)}
 #event2 .lucky_txt2 p{width: 100%;color:lightgray; font-size: 20px; padding-bottom: 10px;
                      text-shadow: 3px 3px 5px black; font-weight: bold;}                                                  
 #event2 .lucky_txt2 span{background-color: rgb(15, 15, 15);
@@ -163,19 +174,77 @@ background-size:cover; background-repeat: no-repeat; background-position:center;
 
 
 /*-----------------------이벤트 끝 ----------------------*/
-#help {width: 100%; height: 300px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
-#help .help_banner{width: 100%; background-color: aqua; height: 100px;}
+#help {width: 100%; height: 250px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
+       background-color: #ccc;}
 #help .help_box{width: 100%; height: 200px;
     margin: 0 auto;}
 #help h1{text-align: left; float: left; height: 200px; 
-    line-height: 50px; margin-top: 50px; margin-left: 50px; font-weight: bold;}
-#help .help_q{display: flex; height: 200px; width: 400px; margin: 0 auto;
-             margin-right: 20px;}
+    line-height: 50px; margin-left: 50px; font-weight: bold;
+    color: #0593d4; text-shadow: 3px 3px 5px rgb(161, 160, 160);} 
+#help .help_q{display: flex; height: 100px; width: 400px; margin: 0 auto;
+             margin-right: 20px; margin-top: 50px; font-weight: bold;}
 #help .help_q li{height: 100px; width:70px;
                    margin-right: 25px;
-                    margin-top: 50px; text-align: center;} 
-#help .help_q li a{color: black; }                    
-#help .help_q img{width: 80%; height: 50px; margin-top:10px; margin-bottom: 15px;}                     
+              text-align: center;} 
+#help .help_q li a{color: black;}                    
+#help .help_q img{width: 80%; height: 50px; margin-bottom: 15px;}                     
 .help_q li:nth-last-child(){margin-right: 0px;}
-/*------------------------------help 끝---------------------*/
+#help .help_q li:nth-child(1){}
+#help .help_q li:nth-child(2){}
+#help .help_q li:nth-child(3){}
 
+/*------------------------------help 끝---------------------*/
+#footer{background-color: black; color:#ccc; font-weight: bold;
+          font-size: 11px; width: 100%; height: 300px;}
+       
+#footer1{width: 100%; height: 200px;
+    padding: 1.5rem;
+      
+}
+#footer1 .footer_txt1{height: 50px;
+     width: 100%; margin-bottom: 20px;}
+#footer1 .footer_txt1 p{width: 100%;  
+     }  
+#footer1 .footer_txt2{}
+#footer2{width: 100%;} 
+#footer2 .footer2_txt{ text-align: right; margin-right: 35px;}
+/*------------------------foter 끝 ---------------------*/
+
+@media screen and(max-width:1300px){
+#nav{width: 70%;}
+#login{width: 11%;}
+#nav .nav_menu li{width: 11%;}
+#best_item .item{width: 100%; height: auto;}
+#best_item .item li:nth-child(1){width:92%;}
+#best_item .item li:nth-child(2){width:45%;} 
+#best_item .item li:nth-child(3){width:45%;}
+#best_item .txt_box{width:25%;}
+#store .store_item{width: 92%;}
+#store .store_item .text_box{width: 21%}
+#store .store_item li{ width: 21%}
+#store .store_item .buy{width: 21%;}
+#store h1{width: 100%;}
+#event .card{width: 17%}
+#event2 {width: 92%;}
+#event2 .hum_txt{width: 38%}
+#event2 .event2_lucky li{width: 46%;}
+}
+@media screen and(max-width:960px) {
+    #nav{width: 70%;}
+#login{width: 11%;}
+#nav .nav_menu li{width: 11%;}
+#best_item .item{width: 100%; height: auto;}
+#best_item .item li:nth-child(1){width:92%;}
+#best_item .item li:nth-child(2){width:45%;} 
+#best_item .item li:nth-child(3){width:45%;}
+#best_item .txt_box{width:25%;}
+#store .store_item{width: 92%;}
+#store .store_item .text_box{width: 21%}
+#store .store_item li{ width: 21%}
+#store .store_item .buy{width: 21%;}
+#store h1{width: 100%;}
+#event .card{width: 17%}
+#event2 {width: 92%;}
+#event2 .hum_txt{width: 38%}
+#event2 .event2_lucky li{width: 46%;}
+}
