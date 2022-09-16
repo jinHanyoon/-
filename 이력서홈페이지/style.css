@@ -7,7 +7,8 @@ a{text-decoration: none;}
 #wrap > div:nth-child(1){/*background-color: burlywood;*/ background:url(../main.png) no-repeat 0 0;}
 #wrap > div:nth-child(2){background:url(../profile.png) no-repeat 0 0;}
 #wrap > div:nth-child(4){background-color: rgb(135, 183, 222);}
-#wrap > div:nth-child(5){background-color: rgb(222, 135, 208);}
+#wrap > div:nth-child(5){background-color: #716E64;}
+#wrap > div:nth-child(6){background-color: rgb(222, 135, 208);}
 #wrap > div > div{margin: 0 auto; width: 1500px;  height: 100vh;
                   /* background-color:rgba(255, 244, 146, 0.5); */
                   }
@@ -28,7 +29,7 @@ a{text-decoration: none;}
 
 #q_mn{
     position: absolute; right:20px; top: 300px; z-index: 9999;
-    width:120px; height:200px; border-radius: 6px;
+    width:120px; height:230px; border-radius: 6px;
     border:1px solid #ccc;
     background-color: #fff; 
 }
@@ -57,7 +58,7 @@ a{text-decoration: none;}
 #skill .skill_list :nth-child(1){background-image: url(./images/pngwing.com1.png);}
 #skill .skill_list :nth-child(2){background-image: url(./images/pngwing.com2.png);}
 #skill .skill_list :nth-child(3){background-image: url(./images/pngwing.com3.png);} 
-#skill .skill_list :nth-child(4){background-image: url(./images/jquery.png)}
+#skill .skill_list :nth-child(4){background-image: url(./images/jquery.png);margin-top: 180px;}
 
 
 
@@ -71,4 +72,20 @@ a{text-decoration: none;}
                     background-size: 100%;}
 #project_1 .output > div{width: 420px; height: 270px; 
                          border: 1px solid #000; box-sizing: border-box;
-                         margin: 120px 0 0 39px;}         
+                         margin: 120px 0 0 39px;}     
+                         
+
+
+#project_2{}                                             
+#project_2 .in_project_2{display: flex; justify-content: center; align-items: center;}
+#project_2 .list{ width: 1000px; }
+#project_2 .list > li{float: left;  width: 500px; height: 600px;
+                     border: 1px solid #000; box-sizing: border-box;
+                     } 
+#project_2 .output{ background:url(../screen.png) no-repeat 0 100px; 
+                    background-size: 100%;}
+#project_2 .output > div{width: 420px; height: 270px; 
+                         border: 1px solid #000; box-sizing: border-box;
+                         margin: 120px 0 0 39px;}     
+                         
+                         
