@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Pen+Script&family=Roboto+Mono:ital,wght@0,400;0,665;0,700;1,400&family=Square+Peg&display=swap" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script>
         $(function(){
@@ -23,29 +26,7 @@
                 
                 $('html, body').stop().animate({scrollTop:tt});
             });
-            //메뉴에 addclass를 적용
-            // $(window).scroll(function(){
-            //     var sct = $(window).scrollTop();
-                
-            //     $('#wrap > div').each(function(){
-            //         var tg = $(this);
-            //         var i = tg.index();
-            //         if(tg.offset().top <= sct){
-            //             $('.nav > li').removeClass('on');
-            //             $('.nav > li').eq(i).addClass('on');
-            //     }
-            // });
-            // $(window).scroll(function(){
-            // var sct = $(window).scrollTop();
-            
-            // contents.each(function(){
-            //     var tg = $(this);
-            //     var i = tg.index();
-            //     if(tg.offset().top <= sct){
-            //         menu.removeClass('on');
-            //         menu.eq(i).addClass('on');
-            //     }
-            // });
+  
             $('.skill_info li').hide()
             $('.HTML').show()
             $('.skill_list li').click(function(){
@@ -92,7 +73,7 @@
                     <h2>
                         Hello, I'm YoonJinHan
                     </h2>
-                    <p>UX Designer & Front End Developer</p>   
+                    <p>Web Publisher</p>   
             </div>
         </div>
         <!-- 소개 -->
@@ -101,7 +82,7 @@
                 <h1>저를 소개할게요!</h1>
                 <div class="profile_info">
                     <div class="profile_left">
-                        <div class="profile_img">                  
+                        <div class="profile_img">               
                         </div>
                         <div class="profile_me">
                         <h2>윤진한</h2>
@@ -225,7 +206,9 @@
         </div>
         <!-- 프로젝트1 -->
         <div id="project_1">
+
             <div class="in_project_1">
+                <h1>Project1</h1>
                <ul class="list">
                    <li class="output">
                        <div><img src="./images/project1.jpg" width="100%" height="100%" alt="젠하이저"></div>
@@ -238,7 +221,7 @@
                           </p>
                        <p><span>사용기술:</span>Jquery,CSS
                        </p>
-                       <a href="">코드보기</a>
+                       <a href="https://github.com/jinHanyoon/info/tree/main/%ED%8F%AC%ED%86%A0%ED%8F%B4%EB%A6%AC%EC%98%A4">코드보기</a>
                        <a href="">결과물보기</a>
                    </li>
                </ul>
@@ -247,16 +230,19 @@
         </div>
         <div id="project_2">
             <div class="in_project_2">
+                <h1>Project2</h1>
+
                <ul class="list">
                    <li class="output">
-                       <div><img src="./images/project1.jpg" width="100%" alt=""></div>
+                       <div><img src="./images/할일앱만들기.png" width="100%" height="100%" alt="할일앱만들기"></div>
                    </li>
                    <li class="account">
-                       <h3>프로젝트명</h3>
-                       <p>작업기간</p>
-                       <p>작업요점</p>
-                       <p>사용기술</p>
-                       <a href="">코드보기</a>
+                       <h3>프로젝트명:할일앱 만들기 제작</h3>
+                       <p><span>작업기간:</span>20일소요</p>
+                       <p><span>작업요점:</span>Javascript 객체를 이용해 클래스를 변경하고 <br>각 객체마다 
+                        랜덤아이디를 통해 고유한 iD값을 부여함</p>
+                       <p><span>사용기술:</span>Javascript,CSS,Bootstrap</p>
+                       <a href="https://github.com/jinHanyoon/info/tree/main/%ED%95%A0%EC%9D%BC%EC%95%B1%EB%A7%8C%EB%93%A4%EA%B8%B0">코드보기</a>
                        <a href="">결과물보기</a>
                    </li>
                </ul>
@@ -265,7 +251,22 @@
         </div>
         <!-- 마무리 -->
         <div id="end">
-            <div class="in_end"></div>
+            <div class="in_end">
+                <div class="end_info">
+                <h1>끝까지 봐주셔서 감사합니다-</h1>
+                <P>열심히 배우며 맡은직무는 물론 <br>
+                커뮤니케이션 등 다방면으로 재주가좋은, 다채로운 팀원이 되겠습니다 </P>
+        </div>
+           
+            <div class="end_info2">
+                <p><span>E-mail</span>
+                <br>wlsgks7532@gmail.com</p>
+                <p><span>HP</span>
+                <br>010-2937-7532</p>
+                <p><span>kakao</span>
+                <br>wlsgks7532</p>
+            </div>
+            </div>
         </div>
     </div>
      <!-- 퀵메뉴 -->
@@ -285,7 +286,6 @@
             function(){
             var	windowTop =$(window).scrollTop()+300;
             $("#q_mn").stop().animate({top:windowTop+"px" },500);
-            //$("#q_mn").stop().animate({속성:"속성값", 속성:"속성값" },1000);	
                 }
             );
         });
