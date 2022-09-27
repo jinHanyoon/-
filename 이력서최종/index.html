@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -92,9 +92,9 @@
                      <li><a href="#">Home</a></li>
                      <li><a href="#">Profile</a></li>
                      <li><a href="#">Skill</a></li>
-                     <li><a href="#">project1</a></li>
-                     <li><a href="#">project2</a></li>
-                     <li><a href="#">finish</a></li>
+                     <li><a href="#">projectA</a></li>
+                     <li><a href="#">projectB</a></li>
+                     <li><a href="#">Finish</a></li>
                   </ul>
                   
               </div> 
@@ -114,7 +114,7 @@
                         </div>
                         <div class="profile_me">
                         <h2>윤진한</h2>
-                            <p>1997.01.17</p>
+                            <p><span>생년월일:</span>1997.01.17</p>
                             <p><span>주소지:</span>부산광역시 연제구</p>
                             <p><span>연락처:</span>010-2937-7532</p>
                             <p><span>E-Mail:</span>wlsgks7532@gmail.com</p>
@@ -209,6 +209,12 @@
             <script>
              $(document).ready(function(){
                 var scene01Num = 1;
+                var scene02Num =1;
+                var scene03Num =1;
+                var scene04Num =1;
+                $('.in_profile').hide()
+                $('#main h2').fadeIn(1500)
+                $('#main p').fadeIn(2000)
 
                 $(window).scroll(function(){
                     var scrollTop = $(document).scrollTop();
@@ -228,6 +234,40 @@
 
                     }
                 });
+                $(window).scroll(function(){
+                    var scrollTop = $(document).scrollTop();
+                    if(scrollTop >3200  && scene02Num == 1){
+                        scene02Num =0;
+                        $('#end .in_end').fadeIn(1000)
+                        console.log('여기까지 작동됨',scrollTop)
+  
+                    }else if(scrollTop <2800 && scene02Num == 0){
+                        scene02Num =1;
+                        $('#end .in_end').fadeOut(1000)
+                        console.log('지워짐',scrollTop)
+                    }
+                })
+                $(window).scroll(function(){
+                    var scrollTop=$(document).scrollTop()
+
+                    if(scrollTop>700 && scene03Num ==1){
+                        scene03Num =0;
+                        $('.in_profile').fadeIn(800)
+                        console.log(scrollTop)
+                        //수치 수정해야함 
+                    }else if(scrollTop<400 && scene03Num ==0)
+                    {scene03Num=1;
+                    $('.in_profile').hide()
+                }
+
+                    
+                })
+           
+                        
+               
+                
+          
+              
              });
 
             </script>
@@ -236,7 +276,7 @@
         <div id="project_1">
 
             <div class="in_project_1">
-                <h1>Project1</h1>
+                <h1>ProjectA</h1>
                <ul class="list">
                    <li class="output">
                        <div><img src="./images/project1.jpg" width="100%" height="100%" alt="젠하이저"></div>
@@ -258,7 +298,7 @@
         </div>
         <div id="project_2">
             <div class="in_project_2">
-                <h1>Project2</h1>
+                <h1>ProjectB</h1>
 
                <ul class="list">
                    <li class="output">
@@ -281,7 +321,7 @@
         <div id="end">
             <div class="in_end">
                 <div class="end_info">
-                <h1>끝까지 봐주셔서 감사합니다-</h1>
+                <h1>끝까지 봐주셔서 감사합니다 :)</h1>
                 <P>열심히 배우며 맡은직무는 물론 <br>
                 커뮤니케이션 등 다방면으로 재주가좋은, 다채로운 팀원이 되겠습니다 </P>
         </div>
@@ -303,9 +343,9 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Skill</a></li>
-            <li><a href="#">project1</a></li>
-            <li><a href="#">project2</a></li>
-            <li><a href="#">finish</a></li>
+            <li><a href="#">projectA</a></li>
+            <li><a href="#">projectB</a></li>
+            <li><a href="#">Finish</a></li>
         </ul>
     </div>
     <script>
@@ -328,6 +368,9 @@
                 $('#q_mn li').eq(q).addClass('on')
 
             })
+         
+        
+
         })
     </script>    
 </body>
