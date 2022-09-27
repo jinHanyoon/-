@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>윤진한입니다</title>
+    <title>윤진한</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,8 @@
             $('.container').eq(0).addClass('on') 
             $('.skill_list h5').eq(0).addClass('on')  
             $('.nav li').eq(0).addClass('on') 
+            $('.skill_info h1').eq(0).addClass('on')  
+            
 
 
             var menu = $('.nav > li');
@@ -61,7 +63,10 @@
                 $('.container').removeClass('on')
                 $('.container').eq(n).addClass('on') 
                 $('.skill_list h5').removeClass('on')
-                $('.skill_list h5').eq(n).addClass('on')   
+                $('.skill_list h5').eq(n).addClass('on') 
+                $('.skill_info h1').removeClass('on')
+                $('.skill_info h1').eq(n).addClass('on')  
+
                 }
    
             
@@ -147,7 +152,7 @@
         <!-- 스킬 -->
         <div id="skill">  
             <div class="in_skill">
-             <h1>저는 이렇게 할 수 있어요 !</h1>
+             <h1 class="skill_h">저는 이렇게 할 수 있어요 !</h1>
          <div class="skillBox">
                <ul class="skill_list">
                    <li>
@@ -215,11 +220,13 @@
                 $('.in_profile').hide()
                 $('#main h2').fadeIn(1500)
                 $('#main p').fadeIn(2000)
+                $('.in_skill').hide()
 
                 $(window).scroll(function(){
                     var scrollTop = $(document).scrollTop();
                     if(scrollTop > 1800 && scene01Num == 1) {
                         scene01Num = 0;
+                        $('.in_skill').fadeIn(2000)
                         $('#skill .in_box01').stop().delay(0).css({top:'300px'}).animate({top:'90px',opacity:1},1000);
                         $('#skill .in_box02').stop().delay(500).css({top:'300px'}).animate({top:'120px'},1000);
                         $('#skill .in_box03').stop().delay(1000).css({top:'300px'}).animate({top:'120px'},1000);
@@ -231,17 +238,18 @@
                         $('#skill .in_box02').stop().css({top:'120px'}).animate({top:'300px'},1000); 
                         $('#skill .in_box03').stop().css({top:'120px'}).animate({top:'300px'},1000);
                         $('#skill .in_box04').stop().css({top:'100px'}).animate({top:'300px'},1000);
+                        $('.in_skill').fadeOut(1000)
 
                     }
                 });
                 $(window).scroll(function(){
                     var scrollTop = $(document).scrollTop();
-                    if(scrollTop >3200  && scene02Num == 1){
+                    if(scrollTop >6300  && scene02Num == 1){
                         scene02Num =0;
                         $('#end .in_end').fadeIn(1000)
                         console.log('여기까지 작동됨',scrollTop)
   
-                    }else if(scrollTop <2800 && scene02Num == 0){
+                    }else if(scrollTop <6000 && scene02Num == 0){
                         scene02Num =1;
                         $('#end .in_end').fadeOut(1000)
                         console.log('지워짐',scrollTop)

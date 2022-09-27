@@ -23,7 +23,7 @@ a{text-decoration: none;}
 #main .nav a{font-size: 20px; font-weight: 600; color:#716E64; 
             } 
 #main .nav li.on a{transition: all 2s;
-     color:red}
+     color:rgb(243, 71, 71)}
 
 #main h2{ float: left; width: 100%; margin:300px 0 0 0; 
           font-size:50px; text-align: right;
@@ -45,7 +45,7 @@ a{text-decoration: none;}
 #q_mn ul.nav{ margin:0 auto; margin-top:30px; list-style:none; width:50px;}	
 #q_mn ul.nav li{ margin-bottom:10px}   
 #q_mn ul.nav li a{ color: #ccc;}
-#q_mn ul.nav li.on a{ color: red;
+#q_mn ul.nav li.on a{ color:rgb(243, 71, 71);
    font-weight: bold;}
 
 #profile .in_profile{}
@@ -80,7 +80,7 @@ a{text-decoration: none;}
 
 #skill{}
 #skill .in_skill{ }
-#skill .in_skill h1{text-align: center; height: 200px; line-height: 200px; color: rgb(63, 60, 60);}
+#skill .in_skill .skill_h{text-align: center; height: 200px; line-height: 200px; color: rgb(63, 60, 60);}
 #skill .skillBox{float: right; width: 800px;}
 #skill .skill_list{width: 100%;display: flex; justify-content: right;
                    align-items: center; height: 500px; margin-top: 100px; }
@@ -95,9 +95,12 @@ a{text-decoration: none;}
 {background-color:rgb(243, 71, 71);
      color:whitesmoke; opacity: 1.0;}
 #skill .skill_list h5.on{margin-top: 30px; font-size: 30px;}
+#skill .skill_info h1.on{color:rgb(243, 71, 71)}
+#skill .skill_info h1{} 
+
 
 #skill .skill_info{width: 700px;; font-size: 20px;
-    text-align:  center;  height: 600px; line-height: 140px; position: relative;} 
+    text-align:center;  height: 600px; line-height: 140px; position: relative;} 
 
 #skill .skill_info li{ position: absolute; width: 100%; height: 600px;
                       align-items: center; }
@@ -158,7 +161,6 @@ a{text-decoration: none;}
               }
 #end .end_info h1{margin-top: 100px; text-align: left; font-size: 50px;
      border-bottom: 5px solid black; width: 550px;
-
    }
 #end .end_info p{text-align:center;  font-size: 40px;
                  margin: 100px auto; text-align: left;}
