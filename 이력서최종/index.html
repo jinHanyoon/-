@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤진한입니다</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Pen+Script&family=Roboto+Mono:ital,wght@0,400;0,665;0,700;1,400&family=Square+Peg&display=swap" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $('.in_box').eq(0).addClass('on')
+            $('.container').eq(0).addClass('on') 
+            $('.skill_list h5').eq(0).addClass('on')  
+            $('.nav li').eq(0).addClass('on') 
+
+
+            var menu = $('.nav > li');
+            var contents = $('#wrap > div');  
+
+            $('.nav> li').click(function(event){
+                event.preventDefault();
+                
+                var tg = $(this);
+                var i = tg.index();
+                
+                var section = $('#wrap > div').eq(i);
+                var tt = section.offset().top;
+                
+                $('html, body').stop().animate({scrollTop:tt});
+                $('#main .nav li').removeClass('on')
+                $('#main .nav li').eq(i).addClass('on')
+            });
+  
+            $('.skill_info li').hide()
+            $('.HTML').show()
+            $('.skill_list li').click(function(){
+                $('.skill_info').each(function(){
+                    if($(this).css('display')=='block'){
+                        $('.skill_info li').hide();
+
+                    }
+                }) 
+                let n=$(this).index()
+                color(n)
+             
+                console.log(n)
+                $('.skill_info li').eq(n).fadeIn(1000)
+                
+               
+                
+
+            })
+            
+            function color(n){
+                $('.in_box').removeClass('on')
+                $('.in_box').eq(n).addClass('on')
+                $('.container').removeClass('on')
+                $('.container').eq(n).addClass('on') 
+                $('.skill_list h5').removeClass('on')
+                $('.skill_list h5').eq(n).addClass('on')   
+                }
+   
+            
+
+         
+
+            $('.account a').hover(
+            function(){$(this).addClass('on')
+                
+            },
+            
+            function(){$(this).removeClass('on')
+
+            })
+
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 메인 -->
+        <div id="main">
+            <div class="in_main">
+              <div class="header">
+                 <h1 class="logo">YJH</h1>
+                 <ul class="nav">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Profile</a></li>
+                     <li><a href="#">Skill</a></li>
+                     <li><a href="#">project1</a></li>
+                     <li><a href="#">project2</a></li>
+                     <li><a href="#">finish</a></li>
+                  </ul>
+                  
+              </div> 
+                    <h2>
+                        Hello, I'm YoonJinHan
+                    </h2>
+                    <p>Web Publisher</p>   
+            </div>
+        </div>
+        <!-- 소개 -->
+        <div id="profile">
+            <div class="in_profile">
+                <h1>저를 소개할게요!</h1>
+                <div class="profile_info">
+                    <div class="profile_left">
+                        <div class="profile_img">               
+                        </div>
+                        <div class="profile_me">
+                        <h2>윤진한</h2>
+                            <p>1997.01.17</p>
+                            <p><span>주소지:</span>부산광역시 연제구</p>
+                            <p><span>연락처:</span>010-2937-7532</p>
+                            <p><span>E-Mail:</span>wlsgks7532@gmail.com</p>
+                        </div>
+                    
+                    </div>
+                    <div class="profile_right">
+                        <div class="profile_text0">
+                        <h1>저는 심플한 디자인과<br>
+                            효율적인 UI를 만드는 <br>
+                            웹 퍼블리셔입니다!
+                        </h1>
+                    </div>
+                        <div class="profile_text">
+                            <p>안녕하세요 저는 웹 퍼블리셔를 지원하는 윤진한입니다.<br>
+                            심플하고 효율적인것들을 표현하는 것을 좋아합니다.</p>
+                            <p>저는 CSS와 jquery를 이용해 동적으로 표현하는것을 좋아하고<br>
+                            기능적이고 효율적인 코드와 유지보수 방법에 대해 관심이 많습니다</p>
+                            <p>저는 코딩 공부를 하는것을 좋아합니다 좋아하는만큼 더 욕심이 나고 <br>
+                            더 많은것들을 공부하고 싶습니다</p>
+                            <p>좋아하는 일을 즐기면서 잘하는 것 <br>
+                            제가 꿈꾸는 저의 모습입니다 </p>
+                        </div>
+                   
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 스킬 -->
+        <div id="skill">  
+            <div class="in_skill">
+             <h1>저는 이렇게 할 수 있어요 !</h1>
+         <div class="skillBox">
+               <ul class="skill_list">
+                   <li>
+                       <div class="container">
+                           <div class="in_box in_box01">70%</div>
+                       </div>
+                       <h5>html</h5>
+                   </li>
+                   <li>
+                        <div class="container">
+                            <div class="in_box in_box02">50%</div>
+                        </div>
+                        <h5>css</h5>
+                   </li>
+                   <li>
+                        <div class="container">
+                            <div class="in_box in_box03">50%</div>
+                        </div>
+                        <h5>jquery</h5>
+                   </li>
+                   <li>
+                        <div class="container">
+                            <div class="in_box in_box04">60%</div>
+                        </div>
+                        <h5>Javascript</h5>
+                  </li>
+               </ul>
+            </div>
+            <div class="skill_info">
+                <ul>
+               <li class="HTML">
+                <h1>HTML</h1>
+                웹 표준과 웹 접근성을 준수하는<br>
+                HTML 구조설계로 시맨틱 태그를 사용하여 마크업을 작성합니다.<br>
+                기획서와 가이드라인을 만들고 체계적인 퍼블리싱 작업을 수행합니다.<br></li>
+                <li>
+                <h1>CSS</h1>
+                    크로스브라우징에 대해IE 지원을 고려하며<br> 
+                    CSS3의 구조와 속성을 이해하고,
+                     원하는 스타일로 코드 구현이 가능합니다.<br>
+                     CSS3에서 새롭게 지원하는 속성을 활용해
+                     다양한 CSS배치와 디자인을 합니다.
+                </li>
+                <li>
+                <h1>jquery</h1> 
+                      웹 퍼블리싱에 반드시 필요한 상호작용<br>
+                      (네비게이션, 탭 메뉴, 아코디언, 모달창)을 위한 <br>
+                      제이쿼리는 플러그인을 사용하지 않고 제작합니다
+                </li>
+                <li>
+                <h1>Javascript</h1> 
+                    필수적인 자바스크립트 활용이 가능하며 .<br> 
+                    주로 객체를 이용해 기능적인 코드를 만들때 사용하며<br>  
+                     대체적인 자바스크립트를 읽을 줄 압니다.
+                </li>
+            </ul>
+            </div>
+            </div>
+            <script>
+             $(document).ready(function(){
+                var scene01Num = 1;
+
+                $(window).scroll(function(){
+                    var scrollTop = $(document).scrollTop();
+                    if(scrollTop > 1800 && scene01Num == 1) {
+                        scene01Num = 0;
+                        $('#skill .in_box01').stop().delay(0).css({top:'300px'}).animate({top:'90px',opacity:1},1000);
+                        $('#skill .in_box02').stop().delay(500).css({top:'300px'}).animate({top:'120px'},1000);
+                        $('#skill .in_box03').stop().delay(1000).css({top:'300px'}).animate({top:'120px'},1000);
+                        $('#skill .in_box04').stop().delay(1500).css({top:'300px'}).animate({top:'100px'},1000);
+                    }
+                    else if(scrollTop < 1500 && scene01Num == 0){
+                        scene01Num = 1;
+                        $('#skill .in_box01').stop().css({top:'90px'}).animate({top:'300px'},1000);
+                        $('#skill .in_box02').stop().css({top:'120px'}).animate({top:'300px'},1000); 
+                        $('#skill .in_box03').stop().css({top:'120px'}).animate({top:'300px'},1000);
+                        $('#skill .in_box04').stop().css({top:'100px'}).animate({top:'300px'},1000);
+
+                    }
+                });
+             });
+
+            </script>
+        </div>
+        <!-- 프로젝트1 -->
+        <div id="project_1">
+
+            <div class="in_project_1">
+                <h1>Project1</h1>
+               <ul class="list">
+                   <li class="output">
+                       <div><img src="./images/project1.jpg" width="100%" height="100%" alt="젠하이저"></div>
+                   </li>
+                   <li class="account">
+                       <h3>프로젝트명:젠하이저 홈페이지 제작</h3>
+                       <p><span>작업기간:</span>8일소요</p>
+                       <p><span>작업요점:</span>Jquery 마우스 호버기능을 이용해<br>
+                          클래스 추가/삭제 기능을 사용하여 동적인 움직임을 표현함
+                          </p>
+                       <p><span>사용기술:</span>Jquery,CSS
+                       </p>
+                       <a href="https://github.com/jinHanyoon/info/tree/main/%ED%8F%AC%ED%86%A0%ED%8F%B4%EB%A6%AC%EC%98%A4">코드보기</a>
+                       <a href="https://ject01.netlify.app/">결과물보기</a>
+                   </li>
+               </ul>
+         
+            </div>
+        </div>
+        <div id="project_2">
+            <div class="in_project_2">
+                <h1>Project2</h1>
+
+               <ul class="list">
+                   <li class="output">
+                       <div><img src="./images/할일앱만들기.png" width="100%" height="100%" alt="할일앱만들기"></div>
+                   </li>
+                   <li class="account">
+                       <h3>프로젝트명:할일앱 만들기 제작</h3>
+                       <p><span>작업기간:</span>20일소요</p>
+                       <p><span>작업요점:</span>Javascript 객체를 이용해 클래스를 변경하고 <br>각 객체마다 
+                        랜덤아이디를 통해 고유한 iD값을 부여함</p>
+                       <p><span>사용기술:</span>Javascript,CSS,Bootstrap</p>
+                       <a href="https://github.com/jinHanyoon/info/tree/main/%ED%95%A0%EC%9D%BC%EC%95%B1%EB%A7%8C%EB%93%A4%EA%B8%B0">코드보기</a>
+                       <a href="https://ject2.netlify.app/">결과물보기</a>
+                   </li>
+               </ul>
+         
+            </div>
+        </div>
+        <!-- 마무리 -->
+        <div id="end">
+            <div class="in_end">
+                <div class="end_info">
+                <h1>끝까지 봐주셔서 감사합니다-</h1>
+                <P>열심히 배우며 맡은직무는 물론 <br>
+                커뮤니케이션 등 다방면으로 재주가좋은, 다채로운 팀원이 되겠습니다 </P>
+        </div>
+           
+            <div class="end_info2">
+                <p><span>E-mail</span>
+                <br>wlsgks7532@gmail.com</p>
+                <p><span>HP</span>
+                <br>010-2937-7532</p>
+                <p><span>kakao</span>
+                <br>wlsgks7532</p>
+            </div>
+            </div>
+        </div>
+    </div>
+     <!-- 퀵메뉴 -->
+     <div id="q_mn">
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Skill</a></li>
+            <li><a href="#">project1</a></li>
+            <li><a href="#">project2</a></li>
+            <li><a href="#">finish</a></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            $(window).scroll(
+            function(){
+            var	windowTop =$(window).scrollTop()+300;
+            $("#q_mn").stop().animate({top:windowTop+"px" },500);
+        });
+        });
+        $(document).ready(function(){
+            $('#q_mn li').eq(0).addClass('on')
+            $('#q_mn li').click(function(e){
+                e.preventDefault()
+                let q=$(this).index()
+                let content = $('#wrap > div').eq(q)
+                let contentW=content.offset().top
+                $('html,body').stop().animate({scrollTop:contentW})
+                $('#q_mn li').removeClass('on')
+                $('#q_mn li').eq(q).addClass('on')
+
+            })
+        })
+    </script>    
+</body>
+</html>
