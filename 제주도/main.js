@@ -8,11 +8,11 @@ play_button.addEventListener("click",wow)
 function wow(){
     let job_value = hob.value
     if(job_value <10){
-        gogo.textContent ="서여이는 바보";
+        gogo.textContent ="";
 
     }
 else
-    gogo.textContent="진한이는 멍청이";
+    gogo.textContent="";
 
 }
 /////////////빵션///////////////
